@@ -8,10 +8,20 @@ new Vue ({
     data: {
         greeting: "Hello I'm learning Vue.js",
         alertMessage: "",
+        cityImage: "./images/lagos-image.jpg",
         // user: "Chilaka Michael",
-        // city: "Lagos, Nigeria.",
+        city: "Lagos, Nigeria.",
     },
     methods: {
+        changeCity() {
+            if (this.city === "Lagos, Nigeria.") {
+                this.city = "Port Harcourt, Nigeria";
+                this.cityImage = "./images/Port-Harcourt.jpg";
+            } else {
+                this.city = "Lagos, Nigeria.";
+                this.cityImage = "./images/lagos-image.jpg";
+            }
+        },
         changeGreeting() {
             this.greeting = this.greeting === "Hello I'm learning Vue.js" ? "What happen" : "Hello I'm learning Vue.js";
         },
