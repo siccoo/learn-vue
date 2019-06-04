@@ -14,6 +14,9 @@ new Vue ({
         city: 'Lagos, Nigeria.',
     },
     methods: {
+        shuffle() {
+            this.numbers = _.shuffle(this.numbers)
+        },
         changeCity() {
             if (this.city === "Lagos, Nigeria.") {
                 this.city = 'Port Harcourt, Nigeria';

@@ -9,6 +9,7 @@
             <li v-for="number in numbers">
                 <p>{{ numbers }}</p>
                 <input placeholder="type something...">
+                <button @click="shuffle">Shuffle!</button>
             </li>
         </ul>
         <h2>{{ greeting }}</h2>
@@ -35,6 +36,7 @@
 
     </div>
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.js"></script>
     <script src="vue.js"></script>
 </body>
 
