@@ -6,8 +6,8 @@
         <!-- where our Vue template code will live -->
         <!-- This syntax is called {{ mustache syntax }} and  is an implementation of the mustache template system in JavaScript. Mustache is a logic-less template syntax. It can be used for HTML, config files, source code - anything.-->
         <ul>
-            <li v-for="number in numbers">
-                <p>{{ numbers }}</p>
+            <li v-for="number in numbers" :key="number.id">
+                <p>{{ number.value }}</p>
                 <input placeholder="type something...">
                 <button @click="shuffle">Shuffle!</button>
             </li>
