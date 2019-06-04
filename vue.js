@@ -6,19 +6,20 @@
 new Vue ({
     el: "#app",
     data: {
+        numbers: [1, 10, 100, 1000, 10000],
         greeting: "Hello I'm learning Vue.js",
         alertMessage: "",
-        cityImage: "./images/lagos-image.jpg",
+        cityImage: './images/lagos-image.jpg',
         // user: "Chilaka Michael",
-        city: "Lagos, Nigeria.",
+        city: 'Lagos, Nigeria.',
     },
     methods: {
         changeCity() {
             if (this.city === "Lagos, Nigeria.") {
-                this.city = "Port Harcourt, Nigeria";
+                this.city = 'Port Harcourt, Nigeria';
                 this.cityImage = "./images/Port-Harcourt.jpg";
             } else {
-                this.city = "Lagos, Nigeria.";
+                this.city = 'Lagos, Nigeria.';
                 this.cityImage = "./images/lagos-image.jpg";
             }
         },
