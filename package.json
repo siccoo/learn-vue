@@ -1,0 +1,22 @@
+{
+  "name": "learn-vue",
+  "version": "1.0.0",
+  "description": "Learning Vue framework",
+  "main": "form.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siccoo/learn-vue.git"
+  },
+  "author": "Chilaka Michael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siccoo/learn-vue/issues"
+  },
+  "homepage": "https://github.com/siccoo/learn-vue#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
