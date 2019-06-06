@@ -11,9 +11,26 @@
                     <span>Original:</span>
                     {{ message }}
                 </header>
+            </div>
+
+            <div class="card">
                 <header class="card-header card-header-title">
                     <span>Reversed:</span>
-                    {{ message.split('').reverse().join('') }}
+                    {{ reversedMessage(this.message.split('').reverse().join('')) }}
+                </header>
+            </div>
+            
+            <div class="card">
+                <header class="card-header card-header-title">
+                    <span>Reversed:</span>
+                    {{ reversedMessage(this.message.split('').reverse().join('')) }}
+                </header>
+            </div>
+
+            <div class="card">
+                <header class="card-header card-header-title">
+                    <span>Reversed:</span>
+                    {{ reversedMessage(this.message.split('').reverse().join('')) }}
                 </header>
             </div>
         </div>
