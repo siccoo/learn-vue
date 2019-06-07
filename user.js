@@ -10,6 +10,7 @@ new Vue({
         }
     },
     created() {
+        // instance has been created
         axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
             const data = response.data;
             const randomUser = response.data[
@@ -21,4 +22,16 @@ new Vue({
             this.company.catchPhrase = randomUser.company.catchPhrase;
         });
     },
+    mounted() {
+        // instance has been mounted
+        console.log(this.$el)
+    }, 
+    updated() {
+        // instance has been updated
+        console.log(this.$el)
+    }, 
+    destroyed() {
+        // instance has been destroyed
+        console.log(this.$el)
+    }
 });
