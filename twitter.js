@@ -33,6 +33,7 @@ new Vue({
 
 Vue.component('tweet-content', {
     template: `
+    <div id="app"></div>
     <div class="media-content">
         <div class="content">
             <p>
@@ -57,6 +58,7 @@ Vue.component('tweet-content', {
 
 Vue.component('tweet-component', {
     template: `
+    <div id="app"></div>
     <div class="tweet">
     <div class="box">
         <article class="media">
