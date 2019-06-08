@@ -31,6 +31,30 @@ new Vue({
     }
 });
 
+Vue.component('tweet-content', {
+    template: `
+    <div class="media-content">
+        <div class="content">
+            <p>
+            <strong>{{tweet.name}}</strong>
+            <small>{{tweet.handle}}</small>
+            <br>
+            {{tweet.tweet}}
+            </p>
+        </div>
+        <div class="level-left">
+            <a class="level-item">
+                <span class="icon is-small">
+                <i class="fas fa-heart"></i>
+                </span>
+                <span class="likes">{{tweet.likes}}</span>
+            </a>
+        </div>
+    </div>
+    `,
+    props: ['tweet']
+});
+
 Vue.component('tweet-component', {
     template: `
     <div class="tweet">
@@ -70,5 +94,6 @@ Vue.component('tweet-component', {
         </span>
     </div>
     </div> 
-    `
-})
+    `,
+    props: ['tweet']
+});
