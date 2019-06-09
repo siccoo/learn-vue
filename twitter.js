@@ -28,12 +28,23 @@ new Vue({
     el: '#app',
     data: {
         tweets
+    },
+    methods: {
+        addTweetMessage(tweet) {
+            let newTweet = {};
+            let lastTweetObjectID =
+                this.tweets[this.tweets.length - 1].id;
+            // shallow copy tweet object
+            newTweet = Object.assign({}, tweet);
+            // set tweet id to be one greater than last tweet
+            newTweet.id = lastTweetObjectID + 1;
+            this.tweets.push(newTweet);
+        }
     }
 });
 
 Vue.component('tweet-content', {
     template: `
-    <div id="app"></div>
     <div class="media-content">
         <div class="content">
             <p>
@@ -44,7 +55,7 @@ Vue.component('tweet-content', {
             </p>
         </div>
         <div class="level-left">
-            <a class="level-item">
+            <a class="level-item" :@click="$emit('add', tweet)">
                 <span class="icon is-small">
                 <i class="fas fa-heart"></i>
                 </span>
@@ -58,10 +69,12 @@ Vue.component('tweet-content', {
 
 Vue.component('tweet-component', {
     template: `
-    <div id="app"></div>
     <div class="tweet">
     <div class="box">
         <article class="media">
+            <tweet-content :tweet="tweet"
+                @add="$emit('add', $event)">
+            </tweet-content>
             <div class="media-left">
                 <figure class="image is-64x64">
                     <img :src="tweet.img">
