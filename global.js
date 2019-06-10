@@ -1,6 +1,6 @@
 
 Vue.component('global-component', {
-    template: `<p>Hello Moya</p>`
+    template: `<p>Hello Moya!!!</p>`
 });
 
 new Vue({
@@ -12,5 +12,16 @@ new Vue({
 });
 
 const localComponent = {
-    template: `<p>Hello Moya</p>`
+    template: `<p>Hello Moya!!!</p>`
 }
+
+new Vue({
+    template: `
+        <div>
+            <local-component></local-component>
+        </div>
+    `,
+    components: {
+        'local-component': localComponent
+    }
+});
