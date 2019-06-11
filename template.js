@@ -1,14 +1,14 @@
-let singleLineTemplate = {
-    template: '<div class="card"><header class="card-header\card-header-title">{{ message }}</header></div>',
+let xTemplate = {
+    template: '#x-template-component',
     props: ['message']
 }
 
 new Vue({
     el: '#app',
     data: {
-        message: 'Greetings!',
+        message: 'Eliora!!!',
     },
     components: {
-        'single-line-template': singleLineTemplate
+        'x-temp': xTemplate
     }
 });

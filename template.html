@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Standard Strings Template</title>
     <link rel="stylesheet" href="template.css">
     <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" />
 </head>
-<body>
-    <div id="app">
-        <single-line-template :message="message">
 
-        </single-line-template>
+<body>
+    <!-- <div id="app">
+        <inline-temp :message="message" inline-template>
+            <div class="card">
+                <header class="card-header card-header-title">
+                    {{ message }}
+                </header>
+            </div>
+        </inline-temp>
+    </div> -->
+
+    <div id="app">
+        <x-temp :message="message"></x-temp>
+        <script type="text/x-template" id="x-template-component">
+            <div class="card">
+                <header class="card-header card-header-title">
+                    {{ message }}
+                </header>
+            </div>
+        </script>
     </div>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="template.js"></script>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="template.js"></script>
 </body>
+
 </html>
